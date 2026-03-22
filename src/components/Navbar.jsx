@@ -1,19 +1,20 @@
 import { NavLink } from "react-router-dom"
 
 import logo from "../assets/logo-good.png"
+import { Hamburger } from "lucide-react";
 
 export default function Navbar() {
     return (
         <div className="w-full h-16 flex items-center my-4 justify-center ">
-            <div className="w-5/6  h-full flex items-center justify-between px-8 py-0 rounded-2xl shadow-md bg-stone-200">
+            <div className="w-full max-w-6xl h-16 flex items-center justify-between px-4 md:px-8 py-0 rounded-2xl shadow-md bg-stone-200">
 
 
                 <div className="h-full py-2 ">
-                    <img src={logo} alt="logo" className="h-full " />
+                    <img src={logo} alt="logo" className="h-full object-contain" />
                 </div>
 
 
-                <div className="flex gap-4 text-xs font-medium">
+                <div className="hidden md:flex gap-4 text-sm font-medium">
 
                     {["/", "/features", "/debug", "/support"].map((path, i) => {
                         const labels = ["Home", "Features", "Debug", "Support"];
@@ -36,6 +37,10 @@ export default function Navbar() {
                     })}
 
                 </div>
+                <div className="md:hidden">
+            
+            <button className="p-2 bg-gray-300 rounded-lg">☰</button>
+           </div>
             </div>
 
         </div>
