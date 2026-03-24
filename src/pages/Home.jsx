@@ -6,9 +6,10 @@ import TextEditor from "../components/TextEditor";
 
 export default function Home() {
     return (
-        <div className="w-full">
+        <div className="min-h-screen flex flex-col">
             <Navbar />
-            <TextEditor />
+            <main className="flex-grow"> <TextEditor />  </main>
+            
             <Footer />
         </div>
     );

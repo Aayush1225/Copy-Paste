@@ -10,8 +10,9 @@ export default function useClipboard() {
             await navigator.clipboard.writeText(text);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-        } catch {
-            console.log("Copy failed");
+        } catch (err) {
+            console.error(err);
+
         }
     };
 
