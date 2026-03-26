@@ -5,7 +5,7 @@ export default function Footer() {
 
         
         <div className="font-semibold text-gray-800 dark:text-gray-200">
-          Copy & Paste
+         Share your Files or Texts across your device in a same wifi seamlessly with us . 
         </div>
 
         
